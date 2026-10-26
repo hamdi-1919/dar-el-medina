@@ -5,3 +5,12 @@
               center / cover no-repeat;
   min-height: 70vh;
 }
+
+.card-img-top {
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-item img {
+  height: 450px;
+  object-fit: cover;
+}
