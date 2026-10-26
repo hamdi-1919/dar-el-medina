@@ -56,7 +56,7 @@
     <p class="col-md-8 fs-4">Découvrir le menu </p>
     <div class="d-grid gap-2 d-sm-flex-colum justify-content-sm-center">
     <a href="#menu" class="btn btn-primary btn-lg ">menu</a>
-    <button class ="btn btn-outline-light btn-lg" > Réserver une table </button></div>
+    <button class ="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#modalReservation" > Réserver une table </button></div>
     
   </div>
   
@@ -77,7 +77,7 @@
         <div class="card-body">
           <h5 class="card-title">Couscous au poisson</h5>
           <p class="card-text">Très délicieux</p>
-          <button class="btn btn-primary">Voir les détails</button>
+          <button class="btn btn-primary"  data-bs-toggle="modal"  data-bs-target="#modalPlat" data-nom="Couscous tunisien" data-image="images.jpg" data-description="Un délicieux couscous traditionnel tunisien"   data-prix="25 DT">Voir les détails</button>
         </div>
         <div class="card-footer d-flex justify-content-between text-bg-success">
           <span>28 DT</span>
@@ -262,6 +262,139 @@
 
 
   <!-- Partie 05 : fenêtres modales -->
+   
+<div class="modal fade " id="modalReservation" tabindex="-1" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Réserver une table</h5>
+        <button type="button" class="btn-close"
+                data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        
+<div class="modal-body">
+  <form id="formReservation">
+
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="nom"
+             name="nom" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="telephone" class="form-label">Téléphone</label>
+      <input type="tel" class="form-control" id="telephone"
+             name="telephone" required>
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date"
+               name="date" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="heure" class="form-label">Heure</label>
+        <input type="time" class="form-control" id="heure"
+               name="heure" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="personnes" class="form-label">
+        Nombre de personnes
+      </label>
+      <select class="form-select" id="personnes"
+              name="personnes" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </div>
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input"
+             id="terrasse" name="terrasse">
+      <label class="form-check-label" for="terrasse">
+        Terrasse
+      </label>
+    </div>
+
+  </form>
+</div>
+
+
+
+
+
+<div class="modal-footer">
+
+  <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">
+    Annuler
+  </button>
+
+  <button type="submit" class="btn btn-success"
+          form="formReservation">
+    Confirmer
+  </button>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Q5.6 : Modale de détail d'un plat -->
+<div class="modal fade" id="modalPlat" tabindex="-1"
+     aria-labelledby="titreModalPlat" aria-hidden="true">
+
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- En-tête de la modale -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="titreModalPlat"></h5>
+
+        <button type="button" class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Fermer"></button>
+      </div>
+
+      <!-- Contenu de la modale -->
+      <div class="modal-body">
+
+        <img src="" alt="" class="img-fluid">
+
+        <p class="description"></p>
+
+        <p class="prix"></p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
   <!-- Partie 07 : contact et pied de page -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

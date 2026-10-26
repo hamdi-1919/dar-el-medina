@@ -49,3 +49,16 @@ data-bs-ride="false": el carousel manuel
 ## Q4.8 
 
 Lorsqu'on clique sur les fleches du deuxieme carrousel, les images ne changent pas correctement, car les deux carrousels ont le meme identifiant (id="carouselGalerie"). 
+
+## Q 5.5 
+modal-dialog-centered:Centre la fenetre modale verticalement dans l'ecran
+modal-lg :Augmente la largeur de la fenetre modale
+
+
+
+modal-dialog-scrollable :Permet de faire defiler le contenu de la modale lorsqu'il est trop long.
+
+
+
+data-bs-backdrop="static":Empeche la fermeture de la modale lorsqu'on clique a l'exterieur.
+
